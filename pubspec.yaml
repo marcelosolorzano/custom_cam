@@ -42,6 +42,11 @@ flutter:
   # list giving the asset and other descriptors for the font. For
   # example:
   fonts:
+    - family: IBMPlexSans
+      fonts:
+        - asset: packages/custom_cam/assets/fonts/IBMPlexSans-Regular.ttf
+        - asset: packages/custom_cam/assets/fonts/IBMPlexSans-Bold.ttf
+          weight: 700
     - family: CustomIcons
       fonts:
         - asset: packages/custom_cam/assets/fonts/CustomIcons.ttf
