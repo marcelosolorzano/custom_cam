@@ -1,7 +1,7 @@
 name: custom_cam
 description: This package project offers an easy way to get camera functionality with a custom UI.
-version: 1.0.0
-homepage: https://github.com/marcelosolorzano/custom_camera
+version: 1.0.1
+homepage: https://github.com/marcelosolorzano/custom_cam
 
 environment:
   sdk: '>=2.19.0 <3.0.0'
