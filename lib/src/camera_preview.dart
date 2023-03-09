@@ -5,6 +5,7 @@ import 'package:custom_cam/src/multimedia_item.dart';
 import 'package:custom_cam/src/custom_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:video_player/video_player.dart';
 
@@ -103,22 +104,22 @@ class _CameraPreviewState extends State<CameraPreview> {
                   exitCallback() => { Navigator.of(context).pop() };
                   CameraAlert exitAlert = CameraAlert(title: 'Salir de fotografías', description: 'Al salir perderá la información ingresada y no podrá recuperarla. ¿Desea continuar?', positiveInput: 'Salir', negativeInput: 'Volver', positiveCallback: exitCallback);
                   showDialog(context: context, builder: (_) { return exitAlert; });
-                }, icon: const Icon(CustomIcons.close, size: 25), color: CustomTheme.secondaryColor),
+                }, icon: Icon(CustomIcons.close, size: 23.w), color: CustomTheme.secondaryColor),
               ),
               OrientationBuilder(
                   builder: (context, orientation) {
                     return Align(
                         alignment: orientation == Orientation.portrait ? Alignment.bottomCenter : Alignment.centerRight,
                         child: Container(
-                          height: orientation == Orientation.portrait ? 189 : double.infinity,
-                          width: orientation == Orientation.portrait ? double.infinity : 189,
+                          height: orientation == Orientation.portrait ? 189.h : double.infinity,
+                          width: orientation == Orientation.portrait ? double.infinity : 189.w,
                           decoration: BoxDecoration(color: CustomTheme.backgroundColor.withOpacity(0.8)),
                           child:
                           Column(
                               mainAxisAlignment: MainAxisAlignment.center,
                               children: [
                                 SizedBox(
-                                  width: 250,
+                                  width: 250.w,
                                   child: TextButton(
                                       onPressed: () {
                                         saveToDocuments();
@@ -138,7 +139,7 @@ class _CameraPreviewState extends State<CameraPreview> {
                                     style: TextButton.styleFrom(
                                         foregroundColor: CustomTheme.primaryColor
                                     ),
-                                    child: const Text('Volver a tomar')
+                                    child: Text('Volver a tomar', style: TextStyle(fontFamily: 'IBMPlexSans', fontSize: 14.sp, fontWeight: FontWeight.w700))
                                 ),
                               ]),
                         )

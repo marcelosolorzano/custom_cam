@@ -1,6 +1,7 @@
 import 'package:custom_cam/src/custom_icons_icons.dart';
 import 'package:custom_cam/src/custom_theme.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CameraAlert extends StatelessWidget {
 
@@ -18,21 +19,21 @@ class CameraAlert extends StatelessWidget {
       title: Column(
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Icon(CustomIcons.warning, size: 55, color: CustomTheme.secondaryColor),
+          Icon(CustomIcons.warning, size: 55.w, color: CustomTheme.secondaryColor),
           Padding(
-            padding: const EdgeInsets.only(top: 13.0),
-            child: SizedBox(width: 250, child: Text(title, textAlign: TextAlign.center, style: const TextStyle(color: Color(0xFF333333), fontFamily: 'IBMPlexSans', fontSize: 18, fontWeight: FontWeight.w700))),
+            padding: EdgeInsets.only(top: 18.h),
+            child: SizedBox(width: 250.w, child: Text(title, textAlign: TextAlign.center, style: TextStyle(color: const Color(0xFF333333), fontFamily: 'IBMPlexSans', fontSize: 18.sp, fontWeight: FontWeight.w700))),
           )
         ],
       ),
-      content: SizedBox(width: 250, child: Text(description, textAlign: TextAlign.center, style: const TextStyle(color: Color(0xFF2C2C2C), fontFamily: 'IBMPlexSans', fontSize: 14, fontWeight: FontWeight.w400))),
+      content: SizedBox(width: 250, child: Text(description, textAlign: TextAlign.center, style: TextStyle(color: const Color(0xFF2C2C2C), fontFamily: 'IBMPlexSans', fontSize: 14.sp, fontWeight: FontWeight.w400))),
       actionsAlignment: MainAxisAlignment.center,
       actions: [
         Column(
           crossAxisAlignment: CrossAxisAlignment.center,
           children: [
             SizedBox(
-              width: 250,
+              width: 250.w,
               child: TextButton(
                   onPressed: () {
                     Navigator.of(context).pop();
@@ -59,8 +60,8 @@ class CameraAlert extends StatelessWidget {
         )
       ],
       elevation: 0,
-      shape: const RoundedRectangleBorder(
-        borderRadius: BorderRadius.all(Radius.circular(14))
+      shape: RoundedRectangleBorder(
+        borderRadius: BorderRadius.all(Radius.circular(14.r))
       ),
     );
   }

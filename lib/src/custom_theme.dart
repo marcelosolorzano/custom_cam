@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 class CustomTheme {
   static Color primaryColor = const Color(0xFF004691);
@@ -12,9 +13,10 @@ class CustomTheme {
       shape: RoundedRectangleBorder(
           borderRadius: BorderRadius.circular(6.0)
       ),
-      textStyle: const TextStyle(
-          fontSize: 16.0,
-          fontWeight: FontWeight.w600
+      textStyle: TextStyle(
+        fontFamily: 'IBMPlexSans',
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w600
       )
   );
 
@@ -23,9 +25,10 @@ class CustomTheme {
       disabledForegroundColor: primaryColor,
       backgroundColor: primaryColor,
       shape: const CircleBorder(),
-      textStyle: const TextStyle(
-          fontSize: 16.0,
-          fontWeight: FontWeight.w600
+      textStyle: TextStyle(
+        fontFamily: 'IBMPlexSans',
+        fontSize: 16.sp,
+        fontWeight: FontWeight.w600
       )
   );
 }

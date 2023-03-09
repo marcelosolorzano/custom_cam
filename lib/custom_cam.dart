@@ -4,6 +4,7 @@ import 'package:camera/camera.dart';
 import 'package:custom_cam/src/custom_icons_icons.dart';
 import 'package:custom_cam/src/camera_alert.dart';
 import 'package:custom_cam/src/custom_theme.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
 import '/src/multimedia_item.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -228,7 +229,7 @@ class _CustomCameraState extends State<CustomCamera> with WidgetsBindingObserver
                     ? Icons.videocam
                     : Icons.camera_alt,
                 color: Colors.white,
-                size: 30),
+                size: 30.w),
           )
       ) : const Spacer();
   }
@@ -248,7 +249,7 @@ class _CustomCameraState extends State<CustomCamera> with WidgetsBindingObserver
                         exitCallback() => { Navigator.of(context).pop() };
                         CameraAlert exitAlert = CameraAlert(title: 'Salir de fotografías', description: 'Al salir perderá la información ingresada y no podrá recuperarla. ¿Desea continuar?', positiveInput: 'Salir', negativeInput: 'Volver', positiveCallback: exitCallback);
                         showDialog(context: context, builder: (_) { return exitAlert; });
-                      }, icon: Icon(CustomIcons.close, size: 25, color: CustomTheme.secondaryColor)),
+                      }, icon: Icon(CustomIcons.close, size: 23.w, color: CustomTheme.secondaryColor)),
                     );
                   }),
                   OrientationBuilder(
@@ -256,8 +257,8 @@ class _CustomCameraState extends State<CustomCamera> with WidgetsBindingObserver
                         return Align(
                             alignment: orientation == Orientation.portrait ? Alignment.bottomCenter : Alignment.centerRight,
                             child: Container(
-                              height: orientation == Orientation.portrait ? 189 : null,
-                              width: orientation == Orientation.portrait ? null : 189,
+                              height: orientation == Orientation.portrait ? 189.h : null,
+                              width: orientation == Orientation.portrait ? null : 189.w,
                               decoration: BoxDecoration(color: CustomTheme.backgroundColor.withOpacity(0.8)),
                               child:
                               Flex(direction: orientation == Orientation.portrait ? Axis.horizontal : Axis.vertical,
@@ -283,14 +284,14 @@ class _CustomCameraState extends State<CustomCamera> with WidgetsBindingObserver
                                           },
                                           style: CustomTheme.circularButtonStyle,
                                           child: SizedBox(
-                                            width: 82,
-                                            height: 82,
+                                            width: 82.w,
+                                            height: 82.w,
                                             child: Icon(
                                                 !_isVideoMode
                                                     ? (widget.isRecordingEnabled ? Icons.camera : CustomIcons.camera)
                                                     : !_isVideoRecording ? Icons.fiber_manual_record : Icons.stop,
                                                 color: Colors.white,
-                                                size: widget.isRecordingEnabled ? 50 : 45),
+                                                size: widget.isRecordingEnabled ? 50.w : 45.w),
                                           ),
                                         )),
                                     const Spacer(),
