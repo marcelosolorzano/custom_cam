@@ -46,7 +46,7 @@ flutter:
     - family: IBMPlexSans
       fonts:
         - asset: packages/custom_cam/assets/fonts/IBMPlexSans-Regular.ttf
-        - asset: assets/fonts/IBMPlexSans-SemiBold.ttf
+        - asset: packages/custom_cam/assets/fonts/IBMPlexSans-SemiBold.ttf
           weight: 600
         - asset: packages/custom_cam/assets/fonts/IBMPlexSans-Bold.ttf
           weight: 700
