@@ -236,6 +236,7 @@ class _CustomCameraState extends State<CustomCamera> with WidgetsBindingObserver
 
   @override
   Widget build(BuildContext context) {
+    ScreenUtil.init(context, designSize: const Size(375, 812));
     return Scaffold(
         body: SafeArea(
             child:
