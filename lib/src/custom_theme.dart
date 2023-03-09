@@ -23,7 +23,6 @@ class CustomTheme {
       disabledForegroundColor: primaryColor,
       backgroundColor: primaryColor,
       shape: const CircleBorder(),
-      padding: const EdgeInsets.all(10),
       textStyle: const TextStyle(
           fontSize: 16.0,
           fontWeight: FontWeight.w600

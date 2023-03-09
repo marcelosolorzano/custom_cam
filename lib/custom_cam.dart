@@ -66,7 +66,7 @@ class _CustomCameraState extends State<CustomCamera> with WidgetsBindingObserver
       await oldController.dispose();
     }
 
-    final CameraController cameraController = CameraController(cameras[0], ResolutionPreset.high);
+    final CameraController cameraController = CameraController(cameras[0], ResolutionPreset.high, enableAudio: widget.isRecordingEnabled);
 
     controller = cameraController;
 
@@ -215,6 +215,24 @@ class _CustomCameraState extends State<CustomCamera> with WidgetsBindingObserver
     }
   }
 
+  Widget _getVideoControls() {
+    return widget.isRecordingEnabled ?
+      Expanded(
+          child: TextButton(
+            style: CustomTheme.circularButtonStyle,
+            onPressed: () {
+              setState(() => _isVideoMode = !_isVideoMode);
+            },
+            child: Icon(
+                !_isVideoMode
+                    ? Icons.videocam
+                    : Icons.camera_alt,
+                color: Colors.white,
+                size: 30),
+          )
+      ) : const Spacer();
+  }
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -245,19 +263,7 @@ class _CustomCameraState extends State<CustomCamera> with WidgetsBindingObserver
                               Flex(direction: orientation == Orientation.portrait ? Axis.horizontal : Axis.vertical,
                                   crossAxisAlignment: CrossAxisAlignment.center,
                                   children: [
-                                    Expanded(
-                                        child: TextButton(
-                                          style: CustomTheme.circularButtonStyle,
-                                          onPressed: () {
-                                            setState(() => _isVideoMode = !_isVideoMode);
-                                          },
-                                          child: Icon(
-                                              !_isVideoMode
-                                                  ? Icons.videocam
-                                                  : Icons.camera_alt,
-                                              color: Colors.white,
-                                              size: 30),
-                                        )),
+                                    _getVideoControls(),
                                     Expanded(
                                         child: TextButton(
                                           onPressed: () {
@@ -276,12 +282,16 @@ class _CustomCameraState extends State<CustomCamera> with WidgetsBindingObserver
                                             }
                                           },
                                           style: CustomTheme.circularButtonStyle,
-                                          child: Icon(
-                                              !_isVideoMode
-                                                  ? Icons.camera
-                                                  : !_isVideoRecording ? Icons.fiber_manual_record : Icons.stop,
-                                              color: Colors.white,
-                                              size: 50),
+                                          child: SizedBox(
+                                            width: 82,
+                                            height: 82,
+                                            child: Icon(
+                                                !_isVideoMode
+                                                    ? (widget.isRecordingEnabled ? Icons.camera : CustomIcons.camera)
+                                                    : !_isVideoRecording ? Icons.fiber_manual_record : Icons.stop,
+                                                color: Colors.white,
+                                                size: widget.isRecordingEnabled ? 50 : 45),
+                                          ),
                                         )),
                                     const Spacer(),
                                   ]),
