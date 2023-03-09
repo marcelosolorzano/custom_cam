@@ -80,4 +80,4 @@ final MultimediaItem? result = await Navigator.of(context).push(
 
 ## Additional information
 
-For a more elaborate usage example see [here](https://github.com/marcelosolorzano/custom_camera/tree/main/example).
+For a more elaborate usage example see [here](https://github.com/marcelosolorzano/custom_cam/tree/main/example).
