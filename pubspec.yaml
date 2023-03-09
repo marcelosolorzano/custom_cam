@@ -11,6 +11,7 @@ dependencies:
   camera: ^0.10.3
   flutter:
     sdk: flutter
+  flutter_screenutil: ^5.6.1
   path_provider: ^2.0.12
   video_player: ^2.5.1
 
@@ -45,6 +46,8 @@ flutter:
     - family: IBMPlexSans
       fonts:
         - asset: packages/custom_cam/assets/fonts/IBMPlexSans-Regular.ttf
+        - asset: assets/fonts/IBMPlexSans-SemiBold.ttf
+          weight: 600
         - asset: packages/custom_cam/assets/fonts/IBMPlexSans-Bold.ttf
           weight: 700
     - family: CustomIcons
