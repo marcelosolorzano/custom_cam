@@ -1,3 +1,7 @@
+# 1.0.3
+
+* Remove hardcoded text font.
+
 # 1.0.2
 
 * Fix alert dialog content padding.

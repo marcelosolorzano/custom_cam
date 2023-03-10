@@ -139,7 +139,7 @@ class _CameraPreviewState extends State<CameraPreview> {
                                     style: TextButton.styleFrom(
                                         foregroundColor: CustomTheme.primaryColor
                                     ),
-                                    child: Text('Volver a tomar', style: TextStyle(fontFamily: 'IBMPlexSans', fontSize: 14.sp, fontWeight: FontWeight.w700))
+                                    child: Text('Volver a tomar', style: TextStyle(fontSize: 14.sp, fontWeight: FontWeight.w700))
                                 ),
                               ]),
                         )

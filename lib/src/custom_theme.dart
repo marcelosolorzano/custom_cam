@@ -14,7 +14,6 @@ class CustomTheme {
           borderRadius: BorderRadius.circular(6.0)
       ),
       textStyle: TextStyle(
-        fontFamily: 'IBMPlexSans',
         fontSize: 16.sp,
         fontWeight: FontWeight.w600
       )
@@ -26,7 +25,6 @@ class CustomTheme {
       backgroundColor: primaryColor,
       shape: const CircleBorder(),
       textStyle: TextStyle(
-        fontFamily: 'IBMPlexSans',
         fontSize: 16.sp,
         fontWeight: FontWeight.w600
       )

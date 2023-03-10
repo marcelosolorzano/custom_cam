@@ -24,12 +24,12 @@ class CameraAlert extends StatelessWidget {
             Icon(CustomIcons.warning, size: 55.w, color: CustomTheme.secondaryColor),
             Padding(
               padding: EdgeInsets.only(top: 18.h),
-              child: SizedBox(width: 250.w, child: Text(title, textAlign: TextAlign.center, style: TextStyle(color: const Color(0xFF333333), fontFamily: 'IBMPlexSans', fontSize: 18.sp, fontWeight: FontWeight.w700))),
+              child: SizedBox(width: 250.w, child: Text(title, textAlign: TextAlign.center, style: TextStyle(color: const Color(0xFF333333), fontSize: 18.sp, fontWeight: FontWeight.w700))),
             )
           ],
         ),
       ),
-      content: SizedBox(width: 250, child: Text(description, textAlign: TextAlign.center, style: TextStyle(color: const Color(0xFF2C2C2C), fontFamily: 'IBMPlexSans', fontSize: 14.sp, fontWeight: FontWeight.w400))),
+      content: SizedBox(width: 250, child: Text(description, textAlign: TextAlign.center, style: TextStyle(color: const Color(0xFF2C2C2C), fontSize: 14.sp, fontWeight: FontWeight.w400))),
       actionsAlignment: MainAxisAlignment.center,
       actions: [
         Padding(
