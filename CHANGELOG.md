@@ -1,3 +1,7 @@
+# 1.0.2
+
+* Fix alert dialog content padding.
+
 # 1.0.1
 
 * Provide a photo-only mode.
