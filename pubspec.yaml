@@ -25,6 +25,13 @@ dev_dependencies:
 
 # The following section is specific to Flutter packages.
 flutter:
+  assets:
+    - packages/custom_cam/assets/CustomIcons.ttf
+
+  fonts:
+    - family: CustomIcons
+      fonts:
+        - asset: packages/custom_cam/assets/CustomIcons.ttf
 
   # To add assets to your package, add an assets section, like this:
   # assets:
