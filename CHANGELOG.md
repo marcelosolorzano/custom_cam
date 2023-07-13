@@ -1,3 +1,7 @@
+# 1.0.4
+
+* Fix custom icons not being displayed
+
 # 1.0.3
 
 * Remove hardcoded text font.
